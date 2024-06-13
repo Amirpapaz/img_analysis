@@ -21,17 +21,19 @@ return (
     <main className ="flex-1 p-4 flex flex-col gap-3 sm:gap-4
      justify-center text-center pb-20"> 
 
-    <div className = "flex flex-col items-center  p-2 "> 
+    <div className = "flex flex-col items-center p-2 specialBtn px-4 py-2 font-bold rounded-xl items-center text-base justify-between mx-auto my-4 focus:border-0 focus:outline-none  hover:scale-105 "> 
       <p> 
-        <input  placeholder="Enter image URL" onChange={handleUrlChange} type='text' />
+        <input  className=" focus:outline-none focus:border-0 " placeholder=" Paste an image URL" onChange={handleUrlChange} type='text' />
       </p>
     </div> 
 
-    <div className= "flex flex-col items-center  p-2 ">
-    <p className="px-2"> 
-    Or Upload a file
+    <div className=" flex flex-col items-center p-2 specialBtn px-4 py-2 font-bold rounded-xl items-center text-base justify-between mx-auto my-2 focus:border-0 focus:outline-none hover:scale-105 cursor-pointer">
+    <p className="px-2 font-bold "> 
+    Or Upload an image
     <label className="fa-solid fa-upload text-blue-400 cursor-pointer hover:text-blue-600 p-2"> 
-    <input className = "hidden" onChange = {handleFileChange} type='file' accept='.jpg,.png'/>   
+      <div> 
+    <input className = "hidden " onChange = {handleFileChange} type='file' accept='.jpg,.png'/>   
+    </div> 
     </label>
     </p>
     </div>   
