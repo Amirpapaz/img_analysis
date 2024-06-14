@@ -32,7 +32,7 @@ return (
     Or Upload an image
     <label className="fa-solid fa-upload text-blue-400 cursor-pointer hover:text-blue-600 p-2"> 
       <div> 
-    <input className = "hidden " onChange = {handleFileChange} type='file' accept='.jpg,.png'/>   
+    <input className = "hidden " onChange = {handleFileChange} type='file' accept='.jpg,.png,.webp,.avif'/>   
     </div> 
     </label>
     </p>
