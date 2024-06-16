@@ -3,7 +3,11 @@ import { HfInference } from "@huggingface/inference"
 const HF_ACCESS_TOKEN = `${import.meta.env.VITE_API_URL}`
 const inference = new HfInference(HF_ACCESS_TOKEN)
 let modelTracker = 0
-const models = ["dblasko/blip-dalle3-img2prompt","Salesforce/blip-image-captioning-large","microsoft/trocr-base-handwritten"]
+const models = ["nlpconnect/vit-gpt2-image-captioning","Salesforce/blip-image-captioning-large","dblasko/blip-dalle3-img2prompt","microsoft/trocr-base-handwritten"]
+
+export function resetmodelTracker(){
+  modelTracker = 0
+}
 
 export async function getImageCaption(file, url,regenerate) {
   try {

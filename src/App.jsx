@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Header from './components/Header'
 import Homepage from './components/Homepage'
 import ImageDisplay from './components/ImageDisplay'
-
+import { resetmodelTracker } from './utils/huggingface'
 export default function App() {
   const [file,setFile] = useState('')
   const [url,setUrl] = useState('')
@@ -13,6 +13,8 @@ export default function App() {
     }else{
       setUrl('')
     }
+    resetmodelTracker()
+
   }
 
   const image = file || url

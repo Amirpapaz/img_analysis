@@ -6,7 +6,7 @@ export default function ImageDisplay(props) {
     const [result, setResult] = useState(null)
     const [loading, setLoading] = useState(true)
     const [regenerate,setRegenerate] = useState(false)
-  
+    
     useEffect(() => {
       async function fetchData() {
         if (file || url) {
@@ -43,7 +43,8 @@ export default function ImageDisplay(props) {
       }
     Regenerate()
     setRegenerate(false) //clear Regenerate value
-  }
+  }   
+
   return (
     <>
     <div className="flex flex-col justify-center items-center w-full h-auto p-2 "> 
