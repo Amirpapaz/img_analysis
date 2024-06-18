@@ -4,17 +4,17 @@ export default function Homepage(props) {
 const {setFile, setUrl} = props
 
 const handleFileChange = (e) => {
-    const tempFile = e.target.files[0];
+    const tempFile = e.target.files[0]
     if (tempFile) {
-      const fileUrl = URL.createObjectURL(tempFile);
-      setFile(fileUrl);
-      setUrl(''); // Clear the URL input when file input is used
+      const fileUrl = URL.createObjectURL(tempFile)
+      setFile(fileUrl)
+      setUrl('') // Clear the URL input when file input is used
     }
   }
 
   const handleUrlChange = (e) => {
-    setUrl(e.target.value);
-    setFile(null); // Clear the file input when URL input is used
+    setUrl(e.target.value)
+    setFile(null) // Clear the file input when URL input is used
   }
 
 return (
